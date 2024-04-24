@@ -1,0 +1,34 @@
+Postman
+
+GET http://localhost:8080/sync SEND
+Response Body : Synchronous API response
+
+GET http://localhost:8080/asyncTry SEND
+Sending request... for 7 seconds then
+Response Body : Asynchronous API response: Async method completed
+
+GET http://localhost:8080/async SEND
+Sending request... for 7 seconds then
+Response Body : Asynchronous API response: Async method completed
+
+GET http://localhost:8080/nested-async SEND
+AsyncMethod1: Start on console
+Sending request... for 7 seconds on postman then
+AsyncMethod1: Calling AsyncMethod2 on console
+AsyncMethod2: Start on console
+Sending request... for 7 seconds on postman then
+AsyncMethod2: End on console
+Response Body : Async API Response: AsyncMethod2 Result on postman
+
+
+GET http://localhost:8080/two-async-in-async SEND
+AsyncMethod1: Start on console
+Sending request... for 7 seconds on postman then
+AsyncMethod1: Calling AsyncMethod2 and AsyncMethod3 on console
+AsyncMethod2: Start on console
+AsyncMethod3: Start on console
+Sending request... for 4 seconds on postman then
+AsyncMethod3: End on console
+Sending request... for 3 seconds on postman then
+AsyncMethod2: End on console
+Response Body : Async API Response: AsyncMethod2 Result, AsyncMethod3 Result on postman
