@@ -32,3 +32,21 @@ AsyncMethod3: End on console
 Sending request... for 3 seconds on postman then
 AsyncMethod2: End on console
 Response Body : Async API Response: AsyncMethod2 Result, AsyncMethod3 Result on postman
+
+----------------------------------------------------------
+reference: https://www.youtube.com/watch?v=xpjvY45Hbyg
+
+CompletableFuture
+    -> used for asynchronous programming in java
+    -> writing non-blocking code by running a task on a separate thread rather than the main application thread
+         -> the main thread will be able to execute other tasks in parallel
+
+Future Limitations
+    1. Futures cannot be completed manually
+    2. Actions cannot be performed until the result is available
+    3. Attaching a callback function is not possible
+    4. Multiple Futures cannot be chained together
+    5. Multiple Futures cannot be combined
+    6. There is no Exception handling in the Future API
+
+
